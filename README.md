@@ -1,25 +1,31 @@
 # Norwegian traffic signs (SVG + open database)
 
-Open catalogue of official Norwegian **fareskilt** (warning signs, 100-series) and **speed-limit-related signs**, published as SVG graphics plus machine-readable JSON databases (bilingual and English-primary).
+Open catalogue of official Norwegian traffic-sign graphics published as SVG plus machine-readable JSON databases (bilingual and English-primary).
 
 This repository is a **standalone open resource**. Source data is published by Statens vegvesen / Kartverket under the [Norwegian Licence for Open Government Data (NLOD) 2.0](https://data.norge.no/nlod/en/2.0). It may be used for any purpose, including commercial use, within the licence terms.
 
 ## What is in this catalogue?
 
-Two groups of official signs, taken from the full NVDB `Skiltnummer` listing (not a hand-picked subset):
+Four groups of official signs, taken from the NVDB `Skiltnummer` listing:
 
-1. **Warning signs (fareskilt)** — triangular signs that alert drivers to a hazard ahead (bends, animals, slippery road, level crossings, etc.). **51** codes.
-2. **Speed limit and related signs** — mandatory speed limits (`362`), end of special limits (`364`), speed zones (`366`–`369`), recommended speed (`812`), and related information signs (`560.1`, `560.3`, `856`). **24** codes.
+1. **Warning signs (fareskilt)** — triangular hazard warnings (100-series). **51** codes.
+2. **Speed limit and related signs** — mandatory limits, zone start/end, recommended speed, related info signs. **24** codes.
+3. **Service / tourist symbols (serviceskilt)** — 640/650 series (sights, activities). **13** codes.
+4. **Direction / route symbols (vegvisning)** — selected 723 / 755–780 / 790 symbols. **33** codes.
 
-Every NVDB code in those groups appears in the databases. If no graphic file could be found, the entry remains with `"svg": null` and `"status": "no_source_found"`.
+Every listed NVDB code in those groups appears in the databases. If no graphic file could be found, the entry remains with `"svg": null` and `"status": "no_source_found"`.
 
 | Category | NVDB codes | With SVG | Unresolved |
 |----------|------------|----------|------------|
 | Warning signs (fareskilt) | 51 | 51 | 0 |
 | Speed limit / related | 24 | 19 | 5 |
-| **Total** | **75** | **70** | **5** |
+| Service / tourist (serviceskilt) | 13 | 13 | 0 |
+| Direction / route (vegvisning) | 33 | 33 | 0 |
+| **Total** | **121** | **116** | **5** |
 
-Unresolved codes (still listed in the databases): `362.20`, `364.20`, `560.1`, `560.3`, `856`.
+Unresolved speed-limit codes (still listed): `362.20`, `364.20`, `560.1`, `560.3`, `856`.
+
+See also [`sourcing/README.md`](sourcing/README.md) for the detailed graphic-source audit of the 640/650/723/755–780/790 set (including packs that were checked and contained **zero** hits: markering, underskilt, opplysning, forbud, vikeplikt).
 
 ## Contents
 
@@ -27,9 +33,14 @@ Unresolved codes (still listed in the databases): `362.20`, `364.20`, `560.1`, `
 |------|-------------|
 | `svg/fareskilt/` | Warning-sign SVGs |
 | `svg/speed_limit/` | Speed-limit and related SVGs |
+| `svg/serviceskilt/` | Service / tourist symbol SVGs |
+| `svg/vegvisning/` | Direction / route symbol SVGs |
 | `database/signs.json` | Bilingual inventory (Norwegian + English fields) |
 | `database/signs_en.json` | **English-primary** inventory (`name`, `meaning`, plus `name_nb`) |
 | `tool/` | Reproducible download / convert / catalogue pipeline |
+| `sourcing/README.md` | Sourcing audit for selected 6xx/7xx codes |
+| `reference/trafikkalfabetet.pdf` | Official Trafikkalfabetet type specimen / construction PDF |
+| `reference/trafikkalfabetet.en.md` | English translation of Trafikkalfabetet text rules |
 | `run.py` | CLI entry point |
 
 ## Sign catalogue — what each sign means
@@ -135,6 +146,66 @@ Yellow triangular signs with a red border. They do **not** set a rule by themsel
 - **`560.1` / `856`** — information about **general** speed limits (built-up vs elsewhere).
 - **`560.3`** — warning that **speed measurement / enforcement** may occur ahead.
 
+### Service / tourist symbols (serviceskilt)
+
+Brown/white tourist and activity symbols used on service signing (640/650 series).
+
+| Code | Name (EN) | Meaning | SVG |
+|------|-----------|---------|-----|
+| `640.10` | Point of interest / sightseeing | Tourist symbol for a noteworthy sight. A custom symbol may replace this for sights of particular importance. | [`svg/serviceskilt/640_10.svg`](svg/serviceskilt/640_10.svg) |
+| `640.101` | World Heritage | Tourist symbol for a UNESCO World Heritage site. | [`svg/serviceskilt/640_101.svg`](svg/serviceskilt/640_101.svg) |
+| `640.102` | National fortifications | Tourist symbol for national fortifications. | [`svg/serviceskilt/640_102.svg`](svg/serviceskilt/640_102.svg) |
+| `640.12` | Museum / gallery | Tourist symbol for a museum or gallery. | [`svg/serviceskilt/640_12.svg`](svg/serviceskilt/640_12.svg) |
+| `640.20` | Viewpoint | Tourist symbol for a scenic viewpoint. | [`svg/serviceskilt/640_20.svg`](svg/serviceskilt/640_20.svg) |
+| `640.30` | Nature conservation area | Tourist symbol for a nature conservation / protected nature area. | [`svg/serviceskilt/640_30.svg`](svg/serviceskilt/640_30.svg) |
+| `650.10` | Bathing area | Tourist/activity symbol for a bathing area. | [`svg/serviceskilt/650_10.svg`](svg/serviceskilt/650_10.svg) |
+| `650.11` | Fishing spot | Tourist/activity symbol for a fishing spot. | [`svg/serviceskilt/650_11.svg`](svg/serviceskilt/650_11.svg) |
+| `650.20` | Hiking trail | Tourist/activity symbol for a hiking trail. | [`svg/serviceskilt/650_20.svg`](svg/serviceskilt/650_20.svg) |
+| `650.21` | Ski trail | Tourist/activity symbol for a ski trail / cross-country track. | [`svg/serviceskilt/650_21.svg`](svg/serviceskilt/650_21.svg) |
+| `650.22` | Cycle trail | Tourist/activity symbol for a cycle trail. | [`svg/serviceskilt/650_22.svg`](svg/serviceskilt/650_22.svg) |
+| `650.40` | Farm food / rural tourism | Tourist symbol for farm food / rural tourism (gardsmat/bygdeturisme). | [`svg/serviceskilt/650_40.svg`](svg/serviceskilt/650_40.svg) |
+| `650.41` | Olavsrosa | Tourist symbol for sites marked with the Olavsrosa quality label. | [`svg/serviceskilt/650_41.svg`](svg/serviceskilt/650_41.svg) |
+
+### Direction / route symbols (vegvisning)
+
+Selected route markers and destination symbols from the vegvisningsskilt series.
+
+| Code | Name (EN) | Meaning | SVG |
+|------|-----------|---------|-----|
+| `723.31` | National tourist route | Route marker for a national tourist road; may also appear on service signs. | [`svg/vegvisning/723_31.svg`](svg/vegvisning/723_31.svg) |
+| `723.41` | Diversion for large vehicles | Route marker for a diversion route for large vehicles. | [`svg/vegvisning/723_41.svg`](svg/vegvisning/723_41.svg) |
+| `723.51` | Route for dangerous goods | Route marker for transport of dangerous goods. | [`svg/vegvisning/723_51.svg`](svg/vegvisning/723_51.svg) |
+| `723.61` | Other diversion route (dash) | Alternative diversion-route symbol (dash). | [`svg/vegvisning/723_61.svg`](svg/vegvisning/723_61.svg) |
+| `723.62` | Other diversion route (filled square) | Alternative diversion-route symbol (filled square). | [`svg/vegvisning/723_62.svg`](svg/vegvisning/723_62.svg) |
+| `723.63` | Other diversion route (triangle) | Alternative diversion-route symbol (triangle). | [`svg/vegvisning/723_63.svg`](svg/vegvisning/723_63.svg) |
+| `723.64` | Other diversion route (hollow square) | Alternative diversion-route symbol (hollow square). | [`svg/vegvisning/723_64.svg`](svg/vegvisning/723_64.svg) |
+| `723.65` | Other diversion route (circle) | Alternative diversion-route symbol (circle). | [`svg/vegvisning/723_65.svg`](svg/vegvisning/723_65.svg) |
+| `723.66` | Other diversion route (arrow) | Alternative diversion-route symbol (arrow). | [`svg/vegvisning/723_66.svg`](svg/vegvisning/723_66.svg) |
+| `723.71` | Junction number — motorway | Junction-number symbol used on motorways with grade-separated junctions. | [`svg/vegvisning/723_71.svg`](svg/vegvisning/723_71.svg) |
+| `723.72` | Junction number — other multilane | Junction-number symbol for other multilane roads with grade-separated junctions. | [`svg/vegvisning/723_72.svg`](svg/vegvisning/723_72.svg) |
+| `723.73` | Junction number — two-lane | Junction-number symbol for two-lane roads with grade-separated junctions. | [`svg/vegvisning/723_73.svg`](svg/vegvisning/723_73.svg) |
+| `755` | Cycle route sign | Direction signing for numbered / marked cycle routes. | [`svg/vegvisning/755.svg`](svg/vegvisning/755.svg) |
+| `761` | Motorway | Direction symbol indicating a motorway. | [`svg/vegvisning/761.svg`](svg/vegvisning/761.svg) |
+| `763` | Motor traffic road | Direction symbol indicating a motor traffic road (motortrafikkveg). | [`svg/vegvisning/763.svg`](svg/vegvisning/763.svg) |
+| `765` | Toll road / road user charging | Direction symbol for a toll road or road-user charging. | [`svg/vegvisning/765.svg`](svg/vegvisning/765.svg) |
+| `767` | Parking | Direction symbol for parking. | [`svg/vegvisning/767.svg`](svg/vegvisning/767.svg) |
+| `769` | Parking garage | Direction symbol for a parking garage / multi-storey car park. | [`svg/vegvisning/769.svg`](svg/vegvisning/769.svg) |
+| `771` | Airport | Direction symbol for an airport. | [`svg/vegvisning/771.svg`](svg/vegvisning/771.svg) |
+| `772` | Heliport | Direction symbol for a heliport / helicopter landing site. | [`svg/vegvisning/772.svg`](svg/vegvisning/772.svg) |
+| `773` | Bus station / terminal | Direction symbol for a bus station or bus terminal. | [`svg/vegvisning/773.svg`](svg/vegvisning/773.svg) |
+| `774` | Railway station / train terminal | Direction symbol for a railway station or train terminal. | [`svg/vegvisning/774.svg`](svg/vegvisning/774.svg) |
+| `775` | Car ferry | Direction symbol for a car ferry. | [`svg/vegvisning/775.svg`](svg/vegvisning/775.svg) |
+| `776` | Cargo port | Direction symbol for a cargo / freight port. | [`svg/vegvisning/776.svg`](svg/vegvisning/776.svg) |
+| `780` | Snow chains | Direction symbol related to snow chains (kjetting). | [`svg/vegvisning/780.svg`](svg/vegvisning/780.svg) |
+| `790.10` | Church | Direction symbol for a church. | [`svg/vegvisning/790_10.svg`](svg/vegvisning/790_10.svg) |
+| `790.15` | Business / industrial area | Direction symbol for a business or industrial area. | [`svg/vegvisning/790_15.svg`](svg/vegvisning/790_15.svg) |
+| `790.16` | Shopping centre | Direction symbol for a shopping centre. | [`svg/vegvisning/790_16.svg`](svg/vegvisning/790_16.svg) |
+| `790.20` | Swimming pool | Direction symbol for a swimming hall / indoor pool. | [`svg/vegvisning/790_20.svg`](svg/vegvisning/790_20.svg) |
+| `790.30` | Alpine ski centre | Direction symbol for an alpine ski centre. | [`svg/vegvisning/790_30.svg`](svg/vegvisning/790_30.svg) |
+| `790.31` | Ski jump | Direction symbol for a ski jump. | [`svg/vegvisning/790_31.svg`](svg/vegvisning/790_31.svg) |
+| `790.32` | Ski stadium | Direction symbol for a ski stadium. | [`svg/vegvisning/790_32.svg`](svg/vegvisning/790_32.svg) |
+| `790.40` | Golf course | Direction symbol for a golf course. | [`svg/vegvisning/790_40.svg`](svg/vegvisning/790_40.svg) |
+
 ## Databases
 
 ### `database/signs_en.json` (English-primary)
@@ -144,7 +215,7 @@ Best starting point for English-language apps and docs. Each entry includes:
 | Field | Meaning |
 |-------|---------|
 | `code` | Official skiltnummer |
-| `category` / `category_label` | `fareskilt` / `speed_limit`, plus English label |
+| `category` / `category_label` | `fareskilt` / `speed_limit` / `serviceskilt` / `vegvisning`, plus English label |
 | `name` | English sign name |
 | `name_nb` | Official Norwegian NVDB description |
 | `meaning` | Plain-English explanation of what the sign means |
@@ -160,6 +231,31 @@ Best starting point for English-language apps and docs. Each entry includes:
 Same inventory with Norwegian-first fields (`name_nb`, `name_en`, `meaning_en`) for consumers that want both languages on equal footing.
 
 **Coverage rule:** every in-scope NVDB code is listed. Gaps are explicit — never silently omitted.
+
+## Trafikkalfabetet (official sign typeface)
+
+Norwegian public traffic signs use a dedicated typeface called **Trafikkalfabetet**
+(“Traffic Alphabet”), developed for legibility on roads.
+
+| Resource | Description |
+|----------|-------------|
+| [`reference/trafikkalfabetet.pdf`](reference/trafikkalfabetet.pdf) | Official Statens vegvesen pattern PDF (N300 annex): glyph drawings, width tables, spacing tables |
+| [`reference/trafikkalfabetet.en.md`](reference/trafikkalfabetet.en.md) | English translation of the PDF’s textual rules |
+| [`reference/README.md`](reference/README.md) | Index of reference files |
+
+**Official download:**  
+https://www.vegvesen.no/globalassets/fag/handboker/vedlegg-til-n300/trafikkalfabetet.pdf  
+
+Linked from Statens vegvesen’s [Filer og fargekoder for trafikkskilt](https://www.vegvesen.no/fag/veg-og-gate/trafikkskilt-og-vegoppmerking/filer-og-fargekoder-for-trafikkskilt/) page (“Trafikkalfabetet er en egen skrifttype utviklet for tekst på trafikkskilt”).
+
+### Summary of the rules (English)
+
+- Trafikkalfabetet **shall be used for all text** on public traffic signs (with limited handbook exceptions such as variable matrix signs and sign 590).
+- Letter text uses an **initial capital + lowercase**, unless a specific sign says otherwise.
+- Character size is keyed to capital height **H**; widths and pairwise spacings are tabulated in the PDF for standard heights (e.g. 35–420 mm).
+- Word spacing is **5/7 H**; number-to-unit spacing **4/7 H**; baseline spacing is **14/7 H**, **12/7 H**, or **11/7 H** depending on whether lines include symbols, plain text, or split names.
+
+The SVG graphics in this repository are symbol artwork; when you compose complete signs with place names or other lettering, use Trafikkalfabetet per the rules above (and Skiltnormalen / Skiltforskriften).
 
 ## Attribution
 
@@ -185,12 +281,12 @@ Requirements: Python 3.10+, `pip install -r requirements.txt`. Optional but reco
 
 ```bash
 pip install -r requirements.txt
-python run.py                 # download, unpack, convert, write both databases
-python run.py --skip-download # reuse work/ caches
-python run.py --force-download
+python run.py                              # fareskilt + speed-limit set
+python -c "from tool.import_guidance_signs import main; main()"  # 640/650/723/755-790 set
+python3 sourcing/generate_readme.py        # refresh sourcing audit
 ```
 
-Working downloads and unpacked archives live under `work/` (gitignored). Published outputs are `svg/`, `database/signs.json`, and `database/signs_en.json`.
+Working downloads and unpacked archives live under `work/` (gitignored). Published outputs are `svg/` and `database/*.json`.
 
 ## Licence
 

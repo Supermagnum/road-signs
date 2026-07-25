@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Norwegian traffic signs — SVG catalogue",
-    "description": "Machine-readable catalogue of Norwegian fareskilt (warning signs) and speed-limit-related signs with SVG graphics where available.",
-    "generated_at": "2026-07-25T01:46:37.877898+00:00",
+    "description": "Machine-readable catalogue of Norwegian fareskilt, speed-limit-related signs, and selected serviceskilt / vegvisningssymboler with SVG graphics where available.",
+    "generated_at": "2026-07-25T23:00:17.969866+00:00",
     "license": "NLOD 2.0",
     "license_url": "https://data.norge.no/nlod/en/2.0",
     "sources": {
@@ -12,19 +12,21 @@
       "skiltforskriften": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219"
     },
     "counts": {
-      "total": 75,
+      "total": 121,
       "by_category": {
         "fareskilt": 51,
-        "speed_limit": 24
+        "speed_limit": 24,
+        "serviceskilt": 13,
+        "vegvisning": 33
       },
       "by_conversion_method": {
-        "eps_converted": 6,
-        "geonorge_native": 62,
+        "eps_converted": 12,
+        "geonorge_native": 102,
         "no_source_found": 5,
         "jpg_traced": 2
       },
       "by_status": {
-        "ok": 70,
+        "ok": 116,
         "no_source_found": 5
       }
     },
@@ -41,16 +43,13 @@
       "source_attribution": "NLOD attribution block",
       "color_codes": "Official PMS values used for traffic signs"
     },
-    "gaps": {
-      "unresolved_codes": [
-        "362.20",
-        "364.20",
-        "560.1",
-        "560.3",
-        "856"
-      ],
-      "explanation": "Codes present in NVDB but without a resolvable graphic in Geonorge or vegvesen EPS/JPG packs. Kept in the database with svg=null."
-    }
+    "packs_checked_empty_for_guidance_codes": [
+      "markeringsskilt-eps.zip",
+      "underskilt-eps.zip",
+      "opplysningsskilt-eps.zip",
+      "forbudsskilt-eps.zip",
+      "vikeplikt-eps.zip"
+    ]
   },
   "signs": [
     {
@@ -5246,6 +5245,3180 @@
         "No matching Geonorge/EPS/JPG file for miniature general speed-limit sign 856."
       ],
       "meaning_en": "Miniature version of the general speed-limit information sign."
+    },
+    {
+      "code": "640.10",
+      "nvdb_enum_id": 9184,
+      "category": "serviceskilt",
+      "name_nb": "Severdighet.",
+      "name_en": "Point of interest / sightseeing",
+      "name_en_machine_translated": false,
+      "meaning_en": "Tourist symbol for a noteworthy sight. A custom symbol may replace this for sights of particular importance.",
+      "nvdb_value": "640.10 - Severdighet",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (serviceskilt / Kap. 6, skilt 640.10)",
+      "sort_order": 648,
+      "svg": "svg/serviceskilt/640_10.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/640_10/640_10/640_10.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "640.101",
+      "nvdb_enum_id": 21398,
+      "category": "serviceskilt",
+      "name_nb": "Verdensarv.",
+      "name_en": "World Heritage",
+      "name_en_machine_translated": false,
+      "meaning_en": "Tourist symbol for a UNESCO World Heritage site.",
+      "nvdb_value": "640.101 - Verdensarv",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (serviceskilt / Kap. 6, skilt 640.101)",
+      "sort_order": 654,
+      "svg": "svg/serviceskilt/640_101.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/640_101/640_101/640_101.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "640.102",
+      "nvdb_enum_id": 21399,
+      "category": "serviceskilt",
+      "name_nb": "Nasjonale festningsverk.",
+      "name_en": "National fortifications",
+      "name_en_machine_translated": false,
+      "meaning_en": "Tourist symbol for national fortifications.",
+      "nvdb_value": "640.102 - Nasjonale festningsverk",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (serviceskilt / Kap. 6, skilt 640.102)",
+      "sort_order": 655,
+      "svg": "svg/serviceskilt/640_102.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/640_102/640_102/640_102.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "640.12",
+      "nvdb_enum_id": 9185,
+      "category": "serviceskilt",
+      "name_nb": "Museum/galleri.",
+      "name_en": "Museum / gallery",
+      "name_en_machine_translated": false,
+      "meaning_en": "Tourist symbol for a museum or gallery.",
+      "nvdb_value": "640.12 - Museum/galleri",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (serviceskilt / Kap. 6, skilt 640.12)",
+      "sort_order": 650,
+      "svg": "svg/serviceskilt/640_12.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/640_12/640_12/640_12.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "640.20",
+      "nvdb_enum_id": 9186,
+      "category": "serviceskilt",
+      "name_nb": "Utsiktspunkt.",
+      "name_en": "Viewpoint",
+      "name_en_machine_translated": false,
+      "meaning_en": "Tourist symbol for a scenic viewpoint.",
+      "nvdb_value": "640.20 - Utsiktspunkt",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (serviceskilt / Kap. 6, skilt 640.20)",
+      "sort_order": 652,
+      "svg": "svg/serviceskilt/640_20.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/640_20/640_20/640_20.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "640.30",
+      "nvdb_enum_id": 9187,
+      "category": "serviceskilt",
+      "name_nb": "Naturvernområde.",
+      "name_en": "Nature conservation area",
+      "name_en_machine_translated": false,
+      "meaning_en": "Tourist symbol for a nature conservation / protected nature area.",
+      "nvdb_value": "640.30 - Naturvernområde",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (serviceskilt / Kap. 6, skilt 640.30)",
+      "sort_order": 654,
+      "svg": "svg/serviceskilt/640_30.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/640_30/640_30/640_30.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "650.10",
+      "nvdb_enum_id": 9188,
+      "category": "serviceskilt",
+      "name_nb": "Badeplass.",
+      "name_en": "Bathing area",
+      "name_en_machine_translated": false,
+      "meaning_en": "Tourist/activity symbol for a bathing area.",
+      "nvdb_value": "650.10 - Badeplass",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (serviceskilt / Kap. 6, skilt 650.10)",
+      "sort_order": 656,
+      "svg": "svg/serviceskilt/650_10.svg",
+      "conversion_method": "eps_converted",
+      "status": "ok",
+      "source_file": "unpacked/serviceskilt_eps/650_10.eps",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "650.11",
+      "nvdb_enum_id": 9189,
+      "category": "serviceskilt",
+      "name_nb": "Fiskeplass.",
+      "name_en": "Fishing spot",
+      "name_en_machine_translated": false,
+      "meaning_en": "Tourist/activity symbol for a fishing spot.",
+      "nvdb_value": "650.11 - Fiskeplass",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (serviceskilt / Kap. 6, skilt 650.11)",
+      "sort_order": 658,
+      "svg": "svg/serviceskilt/650_11.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/650_11/650_11/650_11.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "650.20",
+      "nvdb_enum_id": 9190,
+      "category": "serviceskilt",
+      "name_nb": "Tursti.",
+      "name_en": "Hiking trail",
+      "name_en_machine_translated": false,
+      "meaning_en": "Tourist/activity symbol for a hiking trail.",
+      "nvdb_value": "650.20 - Tursti",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (serviceskilt / Kap. 6, skilt 650.20)",
+      "sort_order": 660,
+      "svg": "svg/serviceskilt/650_20.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/650_20/650_20/650_20.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "650.21",
+      "nvdb_enum_id": 9191,
+      "category": "serviceskilt",
+      "name_nb": "Skiløype.",
+      "name_en": "Ski trail",
+      "name_en_machine_translated": false,
+      "meaning_en": "Tourist/activity symbol for a ski trail / cross-country track.",
+      "nvdb_value": "650.21 - Skiløype",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (serviceskilt / Kap. 6, skilt 650.21)",
+      "sort_order": 662,
+      "svg": "svg/serviceskilt/650_21.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/650_21/650_21/650_21.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "650.22",
+      "nvdb_enum_id": 21400,
+      "category": "serviceskilt",
+      "name_nb": "Sykkelløype.",
+      "name_en": "Cycle trail",
+      "name_en_machine_translated": false,
+      "meaning_en": "Tourist/activity symbol for a cycle trail.",
+      "nvdb_value": "650.22 - Sykkelløype",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (serviceskilt / Kap. 6, skilt 650.22)",
+      "sort_order": 663,
+      "svg": "svg/serviceskilt/650_22.svg",
+      "conversion_method": "eps_converted",
+      "status": "ok",
+      "source_file": "unpacked/serviceskilt_eps/650_22 Sykkelloype.eps",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "650.40",
+      "nvdb_enum_id": 9192,
+      "category": "serviceskilt",
+      "name_nb": "Gardsmat/Bygdeturisme.",
+      "name_en": "Farm food / rural tourism",
+      "name_en_machine_translated": false,
+      "meaning_en": "Tourist symbol for farm food / rural tourism (gardsmat/bygdeturisme).",
+      "nvdb_value": "650.40 - Gardsmat/Bygdeturisme",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (serviceskilt / Kap. 6, skilt 650.40)",
+      "sort_order": 664,
+      "svg": "svg/serviceskilt/650_40.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/650_40/650_40/650_40.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "650.41",
+      "nvdb_enum_id": 21401,
+      "category": "serviceskilt",
+      "name_nb": "Olavsrosa.",
+      "name_en": "Olavsrosa",
+      "name_en_machine_translated": false,
+      "meaning_en": "Tourist symbol for sites marked with the Olavsrosa quality label.",
+      "nvdb_value": "650.41 - Olavsrosa",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (serviceskilt / Kap. 6, skilt 650.41)",
+      "sort_order": 663,
+      "svg": "svg/serviceskilt/650_41.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/650_41/650_41/650_41.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "723.31",
+      "nvdb_enum_id": 9211,
+      "category": "vegvisning",
+      "name_nb": "Nasjonal turistveg.",
+      "name_en": "National tourist route",
+      "name_en_machine_translated": false,
+      "meaning_en": "Route marker for a national tourist road; may also appear on service signs.",
+      "nvdb_value": "723.31 - Nasjonal turistveg",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 723.31)",
+      "sort_order": 796,
+      "svg": "svg/vegvisning/723_31.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/723_31/723_31/723_31.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "723.41",
+      "nvdb_enum_id": 9212,
+      "category": "vegvisning",
+      "name_nb": "Omkjøringsrute for store kjøretøy.",
+      "name_en": "Diversion for large vehicles",
+      "name_en_machine_translated": false,
+      "meaning_en": "Route marker for a diversion route for large vehicles.",
+      "nvdb_value": "723.41 - Omkjøringsrute for store kjøretøy",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 723.41)",
+      "sort_order": 798,
+      "svg": "svg/vegvisning/723_41.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/723_41/723_41/723_41.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "723.51",
+      "nvdb_enum_id": 9213,
+      "category": "vegvisning",
+      "name_nb": "Rute for transport av farlig gods.",
+      "name_en": "Route for dangerous goods",
+      "name_en_machine_translated": false,
+      "meaning_en": "Route marker for transport of dangerous goods.",
+      "nvdb_value": "723.51 - Rute for transport av farlig gods",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 723.51)",
+      "sort_order": 800,
+      "svg": "svg/vegvisning/723_51.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/723_51/723_51/723_51.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "723.61",
+      "nvdb_enum_id": 9214,
+      "category": "vegvisning",
+      "name_nb": "Andre omkjøringsruter (strek).",
+      "name_en": "Other diversion route (dash)",
+      "name_en_machine_translated": false,
+      "meaning_en": "Alternative diversion-route symbol (dash).",
+      "nvdb_value": "723.61 - Andre omkjøringsruter (strek)",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 723.61)",
+      "sort_order": 802,
+      "svg": "svg/vegvisning/723_61.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/723_61/723_61/723_61.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "723.62",
+      "nvdb_enum_id": 9215,
+      "category": "vegvisning",
+      "name_nb": "Andre omkjøringsruter (fylt kvadrat).",
+      "name_en": "Other diversion route (filled square)",
+      "name_en_machine_translated": false,
+      "meaning_en": "Alternative diversion-route symbol (filled square).",
+      "nvdb_value": "723.62 - Andre omkjøringsruter (fylt kvadrat)",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 723.62)",
+      "sort_order": 804,
+      "svg": "svg/vegvisning/723_62.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/723_62/723_62/723_62.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "723.63",
+      "nvdb_enum_id": 9216,
+      "category": "vegvisning",
+      "name_nb": "Andre omkjøringsruter (trekant).",
+      "name_en": "Other diversion route (triangle)",
+      "name_en_machine_translated": false,
+      "meaning_en": "Alternative diversion-route symbol (triangle).",
+      "nvdb_value": "723.63 - Andre omkjøringsruter (trekant)",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 723.63)",
+      "sort_order": 806,
+      "svg": "svg/vegvisning/723_63.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/723_63/723_63/723_63.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "723.64",
+      "nvdb_enum_id": 9217,
+      "category": "vegvisning",
+      "name_nb": "Andre omkjøringsruter (hult kvadrat).",
+      "name_en": "Other diversion route (hollow square)",
+      "name_en_machine_translated": false,
+      "meaning_en": "Alternative diversion-route symbol (hollow square).",
+      "nvdb_value": "723.64 - Andre omkjøringsruter (hult kvadrat)",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 723.64)",
+      "sort_order": 808,
+      "svg": "svg/vegvisning/723_64.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/723_64/723_64/723_64.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "723.65",
+      "nvdb_enum_id": 9218,
+      "category": "vegvisning",
+      "name_nb": "Andre omkjøringsruter (sirkel).",
+      "name_en": "Other diversion route (circle)",
+      "name_en_machine_translated": false,
+      "meaning_en": "Alternative diversion-route symbol (circle).",
+      "nvdb_value": "723.65 - Andre omkjøringsruter (sirkel)",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 723.65)",
+      "sort_order": 810,
+      "svg": "svg/vegvisning/723_65.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/723_65/723_65/723_65.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "723.66",
+      "nvdb_enum_id": 9219,
+      "category": "vegvisning",
+      "name_nb": "Andre omkjøringsruter (pil).",
+      "name_en": "Other diversion route (arrow)",
+      "name_en_machine_translated": false,
+      "meaning_en": "Alternative diversion-route symbol (arrow).",
+      "nvdb_value": "723.66 - Andre omkjøringsruter (pil)",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 723.66)",
+      "sort_order": 812,
+      "svg": "svg/vegvisning/723_66.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/723_66/723_66/723_66.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "723.71",
+      "nvdb_enum_id": 9220,
+      "category": "vegvisning",
+      "name_nb": "Kryssnummer for motorveg.",
+      "name_en": "Junction number — motorway",
+      "name_en_machine_translated": false,
+      "meaning_en": "Junction-number symbol used on motorways with grade-separated junctions.",
+      "nvdb_value": "723.71 - Kryssnummer for motorveg",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 723.71)",
+      "sort_order": 814,
+      "svg": "svg/vegvisning/723_71.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/723_71/723_71/723_71.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "723.72",
+      "nvdb_enum_id": 9221,
+      "category": "vegvisning",
+      "name_nb": "Kryssnummer for annen flerfeltsveg med planskilte kryss.",
+      "name_en": "Junction number — other multilane",
+      "name_en_machine_translated": false,
+      "meaning_en": "Junction-number symbol for other multilane roads with grade-separated junctions.",
+      "nvdb_value": "723.72 - Kryssnummer for annen flerfeltsveg med planskilte kryss",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 723.72)",
+      "sort_order": 816,
+      "svg": "svg/vegvisning/723_72.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/723_72/723_72/723_72.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "723.73",
+      "nvdb_enum_id": 9222,
+      "category": "vegvisning",
+      "name_nb": "Kryssnummer for tofeltsveg med planskilte kryss.",
+      "name_en": "Junction number — two-lane",
+      "name_en_machine_translated": false,
+      "meaning_en": "Junction-number symbol for two-lane roads with grade-separated junctions.",
+      "nvdb_value": "723.73 - Kryssnummer for tofeltsveg med planskilte kryss",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 723.73)",
+      "sort_order": 818,
+      "svg": "svg/vegvisning/723_73.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/723_73/723_73/723_73.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "755",
+      "nvdb_enum_id": 8889,
+      "category": "vegvisning",
+      "name_nb": "Sykkelruteskilt.",
+      "name_en": "Cycle route sign",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction signing for numbered / marked cycle routes.",
+      "nvdb_value": "755 - Sykkelruteskilt",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 755)",
+      "sort_order": 902,
+      "svg": "svg/vegvisning/755.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/755/755/755.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "761",
+      "nvdb_enum_id": 9231,
+      "category": "vegvisning",
+      "name_nb": "Motorveg.",
+      "name_en": "Motorway",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol indicating a motorway.",
+      "nvdb_value": "761 - Motorveg",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 761)",
+      "sort_order": 906,
+      "svg": "svg/vegvisning/761.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/761_0/761_0/761_0.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "763",
+      "nvdb_enum_id": 9232,
+      "category": "vegvisning",
+      "name_nb": "Motortrafikkveg.",
+      "name_en": "Motor traffic road",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol indicating a motor traffic road (motortrafikkveg).",
+      "nvdb_value": "763 - Motortrafikkveg",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 763)",
+      "sort_order": 910,
+      "svg": "svg/vegvisning/763.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/763_0/763_0/763_0.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "765",
+      "nvdb_enum_id": 9994,
+      "category": "vegvisning",
+      "name_nb": "Bomveg/brukerbetaling på veg.",
+      "name_en": "Toll road / road user charging",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for a toll road or road-user charging.",
+      "nvdb_value": "765 - Bomveg/brukerbetaling på veg",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 765)",
+      "sort_order": 912,
+      "svg": "svg/vegvisning/765.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/765_0/765_0/765_0.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "767",
+      "nvdb_enum_id": 9233,
+      "category": "vegvisning",
+      "name_nb": "Parkering.",
+      "name_en": "Parking",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for parking.",
+      "nvdb_value": "767 - Parkering",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 767)",
+      "sort_order": 918,
+      "svg": "svg/vegvisning/767.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/767_0/767_0/767_0.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "769",
+      "nvdb_enum_id": 9234,
+      "category": "vegvisning",
+      "name_nb": "Parkeringshus.",
+      "name_en": "Parking garage",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for a parking garage / multi-storey car park.",
+      "nvdb_value": "769 - Parkeringshus",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 769)",
+      "sort_order": 922,
+      "svg": "svg/vegvisning/769.svg",
+      "conversion_method": "eps_converted",
+      "status": "ok",
+      "source_file": "unpacked/vegvisningsskilt_eps/769_0.eps",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "771",
+      "nvdb_enum_id": 9235,
+      "category": "vegvisning",
+      "name_nb": "Lufthavn/flyplass.",
+      "name_en": "Airport",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for an airport.",
+      "nvdb_value": "771 - Lufthavn/flyplass",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 771)",
+      "sort_order": 926,
+      "svg": "svg/vegvisning/771.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/771_0/771_0/771_0.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "772",
+      "nvdb_enum_id": 9236,
+      "category": "vegvisning",
+      "name_nb": "Helikopterplass.",
+      "name_en": "Heliport",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for a heliport / helicopter landing site.",
+      "nvdb_value": "772 - Helikopterplass",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 772)",
+      "sort_order": 928,
+      "svg": "svg/vegvisning/772.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/772_0/772_0/772_0.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "773",
+      "nvdb_enum_id": 9237,
+      "category": "vegvisning",
+      "name_nb": "Busstasjon/bussterminal.",
+      "name_en": "Bus station / terminal",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for a bus station or bus terminal.",
+      "nvdb_value": "773 - Busstasjon/bussterminal",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 773)",
+      "sort_order": 930,
+      "svg": "svg/vegvisning/773.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/773_0/773_0/773_0.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "774",
+      "nvdb_enum_id": 9238,
+      "category": "vegvisning",
+      "name_nb": "Jernbanestasjon/togterminal.",
+      "name_en": "Railway station / train terminal",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for a railway station or train terminal.",
+      "nvdb_value": "774 - Jernbanestasjon/togterminal",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 774)",
+      "sort_order": 932,
+      "svg": "svg/vegvisning/774.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/774_0/774_0/774_0.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "775",
+      "nvdb_enum_id": 9239,
+      "category": "vegvisning",
+      "name_nb": "Bilferje.",
+      "name_en": "Car ferry",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for a car ferry.",
+      "nvdb_value": "775 - Bilferje",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 775)",
+      "sort_order": 934,
+      "svg": "svg/vegvisning/775.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/775_0/775_0/775_0.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "776",
+      "nvdb_enum_id": 17317,
+      "category": "vegvisning",
+      "name_nb": "Godshavn.",
+      "name_en": "Cargo port",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for a cargo / freight port.",
+      "nvdb_value": "776 - Godshavn",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 776)",
+      "sort_order": 935,
+      "svg": "svg/vegvisning/776.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/776/776/776.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "780",
+      "nvdb_enum_id": 16058,
+      "category": "vegvisning",
+      "name_nb": "Kjetting.",
+      "name_en": "Snow chains",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol related to snow chains (kjetting).",
+      "nvdb_value": "780 - Kjetting",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 780)",
+      "sort_order": 936,
+      "svg": "svg/vegvisning/780.svg",
+      "conversion_method": "eps_converted",
+      "status": "ok",
+      "source_file": "unpacked/vegvisningsskilt_eps/780 Kjetting.eps",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "790.10",
+      "nvdb_enum_id": 9240,
+      "category": "vegvisning",
+      "name_nb": "Kirke.",
+      "name_en": "Church",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for a church.",
+      "nvdb_value": "790.10 - Kirke",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 790.10)",
+      "sort_order": 937,
+      "svg": "svg/vegvisning/790_10.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/790_10/790_10/790_10.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "790.15",
+      "nvdb_enum_id": 9241,
+      "category": "vegvisning",
+      "name_nb": "Næringsområde.",
+      "name_en": "Business / industrial area",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for a business or industrial area.",
+      "nvdb_value": "790.15 - Næringsområde",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 790.15)",
+      "sort_order": 938,
+      "svg": "svg/vegvisning/790_15.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/790_15/790_15/790_15.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "790.16",
+      "nvdb_enum_id": 21402,
+      "category": "vegvisning",
+      "name_nb": "Kjøpesenter.",
+      "name_en": "Shopping centre",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for a shopping centre.",
+      "nvdb_value": "790.16 - Kjøpesenter",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 790.16)",
+      "sort_order": 939,
+      "svg": "svg/vegvisning/790_16.svg",
+      "conversion_method": "eps_converted",
+      "status": "ok",
+      "source_file": "unpacked/vegvisningsskilt_eps/790_16 Kjopesenter.eps",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "790.20",
+      "nvdb_enum_id": 9242,
+      "category": "vegvisning",
+      "name_nb": "Svømmehall.",
+      "name_en": "Swimming pool",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for a swimming hall / indoor pool.",
+      "nvdb_value": "790.20 - Svømmehall",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 790.20)",
+      "sort_order": 940,
+      "svg": "svg/vegvisning/790_20.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/790_20/790_20/790_20.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "790.30",
+      "nvdb_enum_id": 9243,
+      "category": "vegvisning",
+      "name_nb": "Alpinanlegg.",
+      "name_en": "Alpine ski centre",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for an alpine ski centre.",
+      "nvdb_value": "790.30 - Alpinanlegg",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 790.30)",
+      "sort_order": 942,
+      "svg": "svg/vegvisning/790_30.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/790_30/790_30/790_30.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "790.31",
+      "nvdb_enum_id": 9244,
+      "category": "vegvisning",
+      "name_nb": "Hoppbakke.",
+      "name_en": "Ski jump",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for a ski jump.",
+      "nvdb_value": "790.31 - Hoppbakke",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 790.31)",
+      "sort_order": 944,
+      "svg": "svg/vegvisning/790_31.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/790_31/790_31/790_31.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "790.32",
+      "nvdb_enum_id": 9245,
+      "category": "vegvisning",
+      "name_nb": "Skistadion.",
+      "name_en": "Ski stadium",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for a ski stadium.",
+      "nvdb_value": "790.32 - Skistadion",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 790.32)",
+      "sort_order": 946,
+      "svg": "svg/vegvisning/790_32.svg",
+      "conversion_method": "geonorge_native",
+      "status": "ok",
+      "source_file": "unpacked/geonorge/790_32/790_32/790_32.svg",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
+    },
+    {
+      "code": "790.40",
+      "nvdb_enum_id": 9246,
+      "category": "vegvisning",
+      "name_nb": "Golfbane.",
+      "name_en": "Golf course",
+      "name_en_machine_translated": false,
+      "meaning_en": "Direction symbol for a golf course.",
+      "nvdb_value": "790.40 - Golfbane",
+      "legal_reference": "https://lovdata.no/dokument/SF/forskrift/2005-10-07-1219 (vegvisningsskilt / Kap. 8, skilt 790.40)",
+      "sort_order": 948,
+      "svg": "svg/vegvisning/790_40.svg",
+      "conversion_method": "eps_converted",
+      "status": "ok",
+      "source_file": "unpacked/vegvisningsskilt_eps/790_40.eps",
+      "source_attribution": {
+        "license": "NLOD 2.0",
+        "license_url": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Inneholder data under norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Statens vegvesen / Kartverket (Geonorge).",
+        "publishers": [
+          "Statens vegvesen",
+          "Kartverket / Geonorge",
+          "NVDB"
+        ]
+      },
+      "color_codes": {
+        "yellow": {
+          "pms": "116",
+          "hex": "#F7D117",
+          "usage": "fareskilt background"
+        },
+        "red": {
+          "pms": "485",
+          "hex": "#DA291C",
+          "usage": "border / forbud"
+        },
+        "blue": {
+          "pms": "300",
+          "hex": "#005EB8",
+          "usage": "påbud / opplysning"
+        },
+        "green": {
+          "pms": "340",
+          "hex": "#009A44",
+          "usage": "serviceskilt"
+        },
+        "orange": {
+          "pms": "165",
+          "hex": "#FF671F",
+          "usage": "temporary / work"
+        },
+        "brown": {
+          "pms": "469",
+          "hex": "#693F23",
+          "usage": "tourist"
+        },
+        "black": {
+          "pms": "Black",
+          "hex": "#000000",
+          "usage": "symbols / text"
+        },
+        "white": {
+          "pms": "White",
+          "hex": "#FFFFFF",
+          "usage": "background / symbols"
+        }
+      },
+      "notes": []
     }
   ]
 }
