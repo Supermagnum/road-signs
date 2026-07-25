@@ -120,7 +120,8 @@ Converted SVGs for all 46 defined codes are published under `svg/serviceskilt/` 
 Text on Norwegian public traffic signs uses **Trafikkalfabetet**. Official pattern PDF and
 English translation of the rules:
 
-- [`../reference/trafikkalfabetet.pdf`](../reference/trafikkalfabetet.pdf)
+- [`../reference/trafikkalfabetet.pdf`](../reference/trafikkalfabetet.pdf) (Norwegian original)
+- [`../reference/trafikkalfabetet.en.pdf`](../reference/trafikkalfabetet.en.pdf) (English edition)
 - [`../reference/trafikkalfabetet.en.md`](../reference/trafikkalfabetet.en.md)
 
 Source: https://www.vegvesen.no/globalassets/fag/handboker/vedlegg-til-n300/trafikkalfabetet.pdf

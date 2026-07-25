@@ -40,6 +40,7 @@ See also [`sourcing/README.md`](sourcing/README.md) for the detailed graphic-sou
 | `tool/` | Reproducible download / convert / catalogue pipeline |
 | `sourcing/README.md` | Sourcing audit for selected 6xx/7xx codes |
 | `reference/trafikkalfabetet.pdf` | Official Trafikkalfabetet type specimen / construction PDF |
+| `reference/trafikkalfabetet.en.pdf` | English edition of Trafikkalfabetet (PDF) |
 | `reference/trafikkalfabetet.en.md` | English translation of Trafikkalfabetet text rules |
 | `run.py` | CLI entry point |
 
@@ -239,8 +240,9 @@ Norwegian public traffic signs use a dedicated typeface called **Trafikkalfabete
 
 | Resource | Description |
 |----------|-------------|
-| [`reference/trafikkalfabetet.pdf`](reference/trafikkalfabetet.pdf) | Official Statens vegvesen pattern PDF (N300 annex): glyph drawings, width tables, spacing tables |
-| [`reference/trafikkalfabetet.en.md`](reference/trafikkalfabetet.en.md) | English translation of the PDF’s textual rules |
+| [`reference/trafikkalfabetet.pdf`](reference/trafikkalfabetet.pdf) | Official Statens vegvesen pattern PDF (N300 annex, Norwegian): glyph drawings, width tables, spacing tables |
+| [`reference/trafikkalfabetet.en.pdf`](reference/trafikkalfabetet.en.pdf) | **English PDF edition** — translated rules + original figures with English captions |
+| [`reference/trafikkalfabetet.en.md`](reference/trafikkalfabetet.en.md) | English text rules in Markdown |
 | [`reference/README.md`](reference/README.md) | Index of reference files |
 
 **Official download:**  
