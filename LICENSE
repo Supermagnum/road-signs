@@ -1,0 +1,14 @@
+Norwegian traffic sign graphics and metadata in this repository are derived from
+open data published by Statens vegvesen and Kartverket (Geonorge / NVDB).
+
+Unless otherwise noted, that source material is available under the
+Norwegian Licence for Open Government Data (NLOD) 2.0:
+https://data.norge.no/nlod/en/2.0
+
+Attribution example:
+"Contains data under the Norwegian Licence for Open Government Data (NLOD)
+made available by Statens vegvesen / Kartverket."
+
+The conversion pipeline source code in tool/ is provided for open reuse
+together with this catalogue. Retain the attribution above when
+redistributing the sign graphics or the derived database.
