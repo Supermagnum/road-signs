@@ -31,18 +31,19 @@ See also [`sourcing/README.md`](sourcing/README.md) for the detailed graphic-sou
 
 | Path | Description |
 |------|-------------|
-| `svg/fareskilt/` | Warning-sign SVGs |
-| `svg/speed_limit/` | Speed-limit and related SVGs |
-| `svg/serviceskilt/` | Service / tourist symbol SVGs |
-| `svg/vegvisning/` | Direction / route symbol SVGs |
-| `database/signs.json` | Bilingual inventory (Norwegian + English fields) |
-| `database/signs_en.json` | **English-primary** inventory (`name`, `meaning`, plus `name_nb`) |
-| `tool/` | Reproducible download / convert / catalogue pipeline |
-| `sourcing/README.md` | Sourcing audit for selected 6xx/7xx codes |
-| `reference/trafikkalfabetet.pdf` | Official Trafikkalfabetet type specimen / construction PDF |
-| `reference/trafikkalfabetet.en.pdf` | English edition of Trafikkalfabetet (PDF) |
-| `reference/trafikkalfabetet.en.md` | English translation of Trafikkalfabetet text rules |
-| `run.py` | CLI entry point |
+| [`svg/fareskilt/`](svg/fareskilt/) | Warning-sign SVGs |
+| [`svg/speed_limit/`](svg/speed_limit/) | Speed-limit and related SVGs |
+| [`svg/serviceskilt/`](svg/serviceskilt/) | Service / tourist symbol SVGs |
+| [`svg/vegvisning/`](svg/vegvisning/) | Direction / route symbol SVGs |
+| [`database/signs.json`](database/signs.json) | Bilingual inventory (Norwegian + English fields) |
+| [`database/signs_en.json`](database/signs_en.json) | **English-primary** inventory (`name`, `meaning`, plus `name_nb`) |
+| [`database/osm_tags.json`](database/osm_tags.json) | OpenStreetMap tag mapping for each catalogue code (`traffic_sign=NO:…`, `hazard=*`, etc.) |
+| [`tool/`](tool/) | Reproducible download / convert / catalogue pipeline |
+| [`sourcing/README.md`](sourcing/README.md) | Sourcing audit for selected 6xx/7xx codes |
+| [`reference/trafikkalfabetet.pdf`](reference/trafikkalfabetet.pdf) | Official Trafikkalfabetet type specimen / construction PDF |
+| [`reference/trafikkalfabetet.en.pdf`](reference/trafikkalfabetet.en.pdf) | English edition of Trafikkalfabetet (PDF) |
+| [`reference/trafikkalfabetet.en.md`](reference/trafikkalfabetet.en.md) | English translation of Trafikkalfabetet text rules |
+| [`run.py`](run.py) | CLI entry point |
 
 ## Sign catalogue — what each sign means
 
@@ -209,7 +210,7 @@ Selected route markers and destination symbols from the vegvisningsskilt series.
 
 ## Databases
 
-### `database/signs_en.json` (English-primary)
+### [`database/signs_en.json`](database/signs_en.json) (English-primary)
 
 Best starting point for English-language apps and docs. Each entry includes:
 
@@ -227,11 +228,58 @@ Best starting point for English-language apps and docs. Each entry includes:
 | `source_attribution` | NLOD attribution block |
 | `color_codes` | Official PMS values used for traffic-sign production |
 
-### `database/signs.json` (bilingual)
+### [`database/signs.json`](database/signs.json) (bilingual)
 
 Same inventory with Norwegian-first fields (`name_nb`, `name_en`, `meaning_en`) for consumers that want both languages on equal footing.
 
 **Coverage rule:** every in-scope NVDB code is listed. Gaps are explicit — never silently omitted.
+
+### [`database/osm_tags.json`](database/osm_tags.json) (OpenStreetMap mapping)
+
+Maps each catalogue code to tags that **already exist** in OpenStreetMap today. Built against:
+
+- [No:Road signs in Norway](https://wiki.openstreetmap.org/wiki/No:Road_signs_in_Norway) (authoritative for `traffic_sign=NO:…` in Norway)
+- [Key:hazard](https://wiki.openstreetmap.org/wiki/Key:hazard) (approved + documented ad-hoc traffic hazard values)
+- [taginfo](https://taginfo.openstreetmap.org/) live counts for `traffic_sign` values starting with `NO:`
+
+Regenerate with [`tool/build_osm_tags.py`](tool/build_osm_tags.py):
+
+```bash
+python3 tool/build_osm_tags.py
+```
+
+| Field | Meaning |
+|-------|---------|
+| `traffic_sign.preferred` | Canonical `NO:{code}` value |
+| `traffic_sign.template` | Form with parameters when the plate is variable (e.g. `NO:140[{distance}]`) |
+| `traffic_sign.taginfo_object_count_approx` | Approximate object count from taginfo (includes common variants) |
+| `implied_tags` | Companion tags routinely paired with the sign (`hazard=*`, `maxspeed=*`, …) |
+| `related_tags` | Feature/POI context tags (crossing, destination amenity, etc.) |
+| `match_status` | How the match was established (see `meta.match_status_values` in the JSON) |
+| `navi_usable_as_fixed_symbol` | Whether the catalogue SVG is suitable as a fixed navigation icon |
+| `variable_fields` | Variable plate content (distance, zone speed, junction number, …) |
+
+Notes for navigation use:
+
+- **136.xh / 136.xv** — level-crossing countdown panels; distances are placement-dependent (not fixed in this DB).
+- **140** — distance to pedestrian crossing; OSM example `NO:140[150 m]`.
+- **723.71–723.73** — junction-number templates with variable digits; marked `not_for_navigation`.
+- **812** — advisory only → `maxspeed:advisory`, never mandatory `maxspeed`.
+- Destination / tourist symbols (640/650/790…) rarely appear alone as `traffic_sign` in Norway taginfo; companion tags point at the destination POI class.
+
+**Cross-country / other countries:** Norway is a [Vienna Convention](https://wiki.openstreetmap.org/wiki/Vienna_Convention_on_Road_Signs_and_Signals) party. Most warning triangles and circular speed plates share meaning with other European states. Each entry’s `international` block records:
+
+| Field | Meaning |
+|-------|---------|
+| `companion_tags_international` | Whether `hazard=*`, `maxspeed=*`, POI keys, etc. apply worldwide |
+| `symbol_scope` | `vienna_convention_family` / `nordic_shared` / `generic_poi_icon` / `norway_specific` |
+| `graphic_reuse_outside_NO` | `yes` / `with_caveat` / `no` — SVG as a generic European-style navi icon |
+| `usable_as_navi_icon_outside_norway` | Combined flag for icon packs outside Norway |
+| `equivalent_traffic_sign_ids` | Example same-meaning IDs (e.g. `DE:103-20`, `SE:A1-2`) — illustrative, not exhaustive |
+
+When mapping roads **outside Norway**, use that country’s `traffic_sign=ISO:…` code — never `NO:…`. Norway-specific plates (Olavsrosa, Nasjonale turistveger, small-electric-vehicle zones, general 50/80 info plate) are flagged `norway_specific`.
+
+This file does **not** invent new OSM keys. Where no stable companion tag exists, `match_status` is `traffic_sign_only` and only `NO:{code}` is asserted.
 
 ## Trafikkalfabetet (official sign typeface)
 
