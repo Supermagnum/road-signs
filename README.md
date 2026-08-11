@@ -38,6 +38,7 @@ See also [`sourcing/README.md`](sourcing/README.md) for the detailed graphic-sou
 | [`database/signs.json`](database/signs.json) | Bilingual inventory (Norwegian + English fields) |
 | [`database/signs_en.json`](database/signs_en.json) | **English-primary** inventory (`name`, `meaning`, plus `name_nb`) |
 | [`database/osm_tags.json`](database/osm_tags.json) | OpenStreetMap tag mapping for each catalogue code (`traffic_sign=NO:…`, `hazard=*`, etc.) |
+| [`database/osm_tags.md`](database/osm_tags.md) | Human-readable view of the OSM tag mapping |
 | [`tool/`](tool/) | Reproducible download / convert / catalogue pipeline |
 | [`sourcing/README.md`](sourcing/README.md) | Sourcing audit for selected 6xx/7xx codes |
 | [`reference/trafikkalfabetet.pdf`](reference/trafikkalfabetet.pdf) | Official Trafikkalfabetet type specimen / construction PDF |
@@ -241,6 +242,8 @@ Maps each catalogue code to tags that **already exist** in OpenStreetMap today. 
 - [No:Road signs in Norway](https://wiki.openstreetmap.org/wiki/No:Road_signs_in_Norway) (authoritative for `traffic_sign=NO:…` in Norway)
 - [Key:hazard](https://wiki.openstreetmap.org/wiki/Key:hazard) (approved + documented ad-hoc traffic hazard values)
 - [taginfo](https://taginfo.openstreetmap.org/) live counts for `traffic_sign` values starting with `NO:`
+
+Human-readable tables: [`database/osm_tags.md`](database/osm_tags.md).
 
 Regenerate with [`tool/build_osm_tags.py`](tool/build_osm_tags.py):
 

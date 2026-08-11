@@ -30,6 +30,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 SIGNS_EN = ROOT / "database" / "signs_en.json"
 OUT = ROOT / "database" / "osm_tags.json"
+OUT_MD = ROOT / "database" / "osm_tags.md"
 TAGINFO_UA = "road-signs-catalogue/1.0 (https://github.com/Supermagnum/road-signs)"
 
 WIKI_NO = "https://wiki.openstreetmap.org/wiki/No:Road_signs_in_Norway"
@@ -1963,6 +1964,193 @@ def build(offline: bool = False) -> dict[str, Any]:
     return {"meta": meta, "signs": entries}
 
 
+CATEGORY_LABELS = {
+    "fareskilt": "Warning signs (fareskilt)",
+    "speed_limit": "Speed limit and related",
+    "serviceskilt": "Service / tourist symbols (serviceskilt)",
+    "vegvisning": "Direction / route symbols (vegvisning)",
+}
+
+
+def _fmt_tag(t: dict[str, Any]) -> str:
+    key = t.get("key", "")
+    if "value" in t and t["value"] is not None:
+        return f"`{key}={t['value']}`"
+    return f"`{key}=*`"
+
+
+def _fmt_tags(tags: list[dict[str, Any]]) -> str:
+    if not tags:
+        return "—"
+    return "; ".join(_fmt_tag(t) for t in tags)
+
+
+def _fmt_equivs(equivs: list[dict[str, Any]]) -> str:
+    if not equivs:
+        return "—"
+    parts = []
+    for e in equivs:
+        parts.append(f"`{e['traffic_sign']}`")
+    return ", ".join(parts)
+
+
+def _yes_no(flag: bool) -> str:
+    return "yes" if flag else "no"
+
+
+def _md_escape_cell(text: str) -> str:
+    return text.replace("|", "\\|").replace("\n", " ")
+
+
+def write_markdown(db: dict[str, Any], path: Path) -> None:
+    """Write a human-readable Markdown companion to osm_tags.json."""
+    meta = db["meta"]
+    counts = meta["counts"]
+    lines: list[str] = []
+    lines.append("# OpenStreetMap tag mapping (human-readable)")
+    lines.append("")
+    lines.append(
+        "Readable view of [`osm_tags.json`](osm_tags.json). "
+        "Machine consumers should use the JSON. Regenerate both with "
+        "`python3 tool/build_osm_tags.py`."
+    )
+    lines.append("")
+    lines.append(f"Generated: `{meta.get('generated_at', '')}`")
+    if meta.get("taginfo_data_until"):
+        lines.append(f"Taginfo data until: `{meta['taginfo_data_until']}`")
+    lines.append("")
+    lines.append("## Summary")
+    lines.append("")
+    lines.append("| Metric | Count |")
+    lines.append("|--------|------:|")
+    lines.append(f"| Total catalogue codes | {counts['total']} |")
+    lines.append(
+        f"| Seen in taginfo as `traffic_sign=NO:…` | {counts['with_taginfo_traffic_sign_usage']} |"
+    )
+    lines.append(
+        f"| Usable as fixed navi symbol | {counts['navi_usable_as_fixed_symbol']} |"
+    )
+    lines.append(
+        f"| Usable as navi icon outside Norway | {counts['usable_as_navi_icon_outside_norway']} |"
+    )
+    lines.append(
+        f"| With foreign equivalent examples | {counts['with_foreign_equivalent_examples']} |"
+    )
+    lines.append("")
+    lines.append("### By match status")
+    lines.append("")
+    lines.append("| Status | Count | Meaning |")
+    lines.append("|--------|------:|---------|")
+    for status, n in counts["by_match_status"].items():
+        meaning = meta["match_status_values"].get(status, "")
+        lines.append(f"| `{status}` | {n} | {_md_escape_cell(meaning)} |")
+    lines.append("")
+    lines.append("### By international symbol scope")
+    lines.append("")
+    lines.append("| Scope | Count | Meaning |")
+    lines.append("|-------|------:|---------|")
+    scope_meanings = meta["international"]["symbol_scope_values"]
+    for scope, n in counts["by_symbol_scope"].items():
+        lines.append(
+            f"| `{scope}` | {n} | {_md_escape_cell(scope_meanings.get(scope, ''))} |"
+        )
+    lines.append("")
+    lines.append("## Conventions")
+    lines.append("")
+    lines.append(meta["international"]["summary"])
+    lines.append("")
+    lines.append(
+        "- Norwegian roads: `traffic_sign=NO:{code}` plus companion tags below."
+    )
+    lines.append(
+        "- Other countries: use that country’s `traffic_sign=ISO:…` ID; keep "
+        "`hazard=*`, `maxspeed=*`, POI tags as listed."
+    )
+    lines.append(
+        "- Full Vienna Convention country lists: see `meta.international` in "
+        "[`osm_tags.json`](osm_tags.json)."
+    )
+    lines.append("")
+
+    # Group signs by category preserving catalogue order
+    by_cat: dict[str, list[dict[str, Any]]] = {}
+    for sign in db["signs"]:
+        by_cat.setdefault(sign["category"], []).append(sign)
+
+    for cat in ("fareskilt", "speed_limit", "serviceskilt", "vegvisning"):
+        signs = by_cat.get(cat) or []
+        if not signs:
+            continue
+        lines.append(f"## {CATEGORY_LABELS.get(cat, cat)}")
+        lines.append("")
+        lines.append(
+            "| Code | Name | `traffic_sign` | Implied tags | Related tags | "
+            "Match | Navi | Outside NO | Scope | Equivalents | Notes |"
+        )
+        lines.append(
+            "|------|------|----------------|--------------|--------------|"
+            "-------|------|------------|-------|-------------|-------|"
+        )
+        for s in signs:
+            intl = s["international"]
+            ts = s["traffic_sign"]
+            preferred = ts.get("preferred", f"NO:{s['code']}")
+            template = ts.get("template") or preferred
+            ts_cell = f"`{preferred}`"
+            if template != preferred:
+                ts_cell += f" / `{template}`"
+            count = ts.get("taginfo_object_count_approx") or 0
+            if count:
+                ts_cell += f" (~{count})"
+
+            notes_parts: list[str] = []
+            notes_parts.extend(s.get("notes") or [])
+            notes_parts.extend(intl.get("notes") or [])
+            if s.get("variable_fields"):
+                vf = ", ".join(
+                    f["name"] for f in s["variable_fields"] if f.get("name")
+                )
+                if vf:
+                    notes_parts.append(f"Variable: {vf}")
+            notes = "; ".join(notes_parts) if notes_parts else "—"
+
+            svg = s.get("svg")
+            code_cell = f"`{s['code']}`"
+            if svg:
+                code_cell = f"[`{s['code']}`](../{svg})"
+
+            lines.append(
+                "| "
+                + " | ".join(
+                    [
+                        code_cell,
+                        _md_escape_cell(s.get("name") or ""),
+                        ts_cell,
+                        _md_escape_cell(_fmt_tags(s.get("implied_tags") or [])),
+                        _md_escape_cell(_fmt_tags(s.get("related_tags") or [])),
+                        f"`{s.get('match_status', '')}`",
+                        _yes_no(bool(s.get("navi_usable_as_fixed_symbol"))),
+                        _yes_no(bool(intl.get("usable_as_navi_icon_outside_norway"))),
+                        f"`{intl.get('symbol_scope', '')}`",
+                        _md_escape_cell(_fmt_equivs(intl.get("equivalent_traffic_sign_ids") or [])),
+                        _md_escape_cell(notes),
+                    ]
+                )
+                + " |"
+            )
+        lines.append("")
+
+    lines.append("## Sources")
+    lines.append("")
+    for key, url in (meta.get("sources") or {}).items():
+        lines.append(f"- {key}: {url}")
+    lines.append("")
+    lines.append(meta.get("license_note", ""))
+    lines.append("")
+
+    path.write_text("\n".join(lines), encoding="utf-8")
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -1975,7 +2163,13 @@ def main(argv: list[str] | None = None) -> int:
         "--output",
         type=Path,
         default=OUT,
-        help=f"Output path (default: {OUT})",
+        help=f"JSON output path (default: {OUT})",
+    )
+    parser.add_argument(
+        "--markdown",
+        type=Path,
+        default=OUT_MD,
+        help=f"Markdown output path (default: {OUT_MD})",
     )
     args = parser.parse_args(argv)
 
@@ -2000,6 +2194,8 @@ def main(argv: list[str] | None = None) -> int:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(db, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {args.output}")
+    write_markdown(db, args.markdown)
+    print(f"Wrote {args.markdown}")
     print(json.dumps(db["meta"]["counts"], indent=2))
     if db["meta"]["missing_curated_mappings"]:
         print("Missing curated mappings:", db["meta"]["missing_curated_mappings"])

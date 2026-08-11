@@ -2,8 +2,8 @@
   "meta": {
     "title": "Norwegian traffic signs — OpenStreetMap tag mapping",
     "description": "Maps each catalogue skiltnummer to traffic_sign=NO:* and companion OSM tags that exist in the wiki / taginfo today. Records which symbols/tags are reusable outside Norway (Vienna Convention family vs Norway-specific). Does not invent new OSM keys.",
-    "generated_at": "2026-08-10T22:58:00.455611+00:00",
-    "taginfo_data_until": "2026-08-10T00:59:13Z",
+    "generated_at": "2026-08-11T23:39:32.722219+00:00",
+    "taginfo_data_until": "2026-08-11T00:59:35Z",
     "catalogue": "database/signs_en.json",
     "license_note": "This mapping file is project documentation. OSM data is ODbL; sign graphics remain under NLOD 2.0 as in the catalogue. Norwegian SVGs are national designs — usable as generic European-style icons where marked, but not as official local traffic signs in other countries.",
     "sources": {
@@ -272,11 +272,11 @@
           },
           {
             "count": 1,
-            "value": "NO:102.1[0,2-1km]"
+            "value": "NO:102.1,812 [40 km/t],807.2"
           },
           {
             "count": 1,
-            "value": "NO:102.1,812 [40 km/t],807.2"
+            "value": "NO:102.1[0,2-1km]"
           }
         ],
         "taginfo_url": "https://taginfo.openstreetmap.org/tags/traffic_sign=NO%3A102.1"
@@ -3088,11 +3088,11 @@
           },
           {
             "count": 1,
-            "value": "NO:109;NO:362:40;NO:723.15:306"
+            "value": "NO:140;NO:362.40;NO:206"
           },
           {
             "count": 1,
-            "value": "NO:140;NO:362.40;NO:206"
+            "value": "NO:109;NO:362:40;NO:723.15:306"
           }
         ],
         "taginfo_url": "https://taginfo.openstreetmap.org/tags/traffic_sign=NO%3A362.40"
@@ -5302,7 +5302,7 @@
           },
           {
             "count": 1,
-            "value": "NO:729_0;No:755"
+            "value": "NO:522;NO:755"
           },
           {
             "count": 1,
@@ -5310,7 +5310,7 @@
           },
           {
             "count": 1,
-            "value": "NO:522;NO:755"
+            "value": "NO:729_0;No:755"
           }
         ],
         "taginfo_url": "https://taginfo.openstreetmap.org/tags/traffic_sign=NO%3A755"
@@ -5491,11 +5491,7 @@
         "taginfo_examples": [
           {
             "count": 1,
-            "value": "NO:713[NO:810.H90;NO:767;Sykkelveg]"
-          },
-          {
-            "count": 1,
-            "value": "NO:767"
+            "value": "NO:701[NO:810.H90;NO:767;Tursti]"
           },
           {
             "count": 1,
@@ -5503,7 +5499,11 @@
           },
           {
             "count": 1,
-            "value": "NO:701[NO:810.H90;NO:767;Tursti]"
+            "value": "NO:713[NO:810.H90;NO:767;Sykkelveg]"
+          },
+          {
+            "count": 1,
+            "value": "NO:767"
           },
           {
             "count": 1,
