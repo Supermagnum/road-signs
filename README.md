@@ -18,12 +18,19 @@ Every listed NVDB code in those groups appears in the databases. If no graphic f
 | Category | NVDB codes | With SVG | Unresolved |
 |----------|------------|----------|------------|
 | Warning signs (fareskilt) | 51 | 51 | 0 |
-| Speed limit / related | 24 | 19 | 5 |
+| Speed limit / related | 24 official + 12 generated | 31 | 5 official unresolved |
 | Service / tourist (serviceskilt) | 13 | 13 | 0 |
 | Direction / route (vegvisning) | 33 | 33 | 0 |
-| **Total** | **121** | **116** | **5** |
 
-Unresolved speed-limit codes (still listed): `362.20`, `364.20`, `560.1`, `560.3`, `856`.
+Unresolved **official** speed-limit codes (still listed, `"svg": null`): `362.20`, `364.20`, `560.1`, `560.3`, `856`.
+
+### Generated speed-limit plates (derived, not original government art)
+
+In addition to the official NVDB `362.xx` graphics, this catalogue includes **12 generated** speed-limit SVGs for every-5 km/h values that appear in OSM `maxspeed` tagging but have **no NVDB Skiltnummer** / no original Statens vegvesen published plate file:
+
+`362.5`, `362.10`, `362.15`, `362.25`, `362.35`, `362.45`, `362.55`, `362.65`, `362.75`, `362.85`, `362.95`, `362.105`
+
+**Provenance:** each file was composited from digit outlines taken from the existing official NPRA/Kartverket-sourced plates already in this catalogue (and Trafikkalfabetet spacing rules). They are a **derived work** under [NLOD 2.0](https://data.norge.no/nlod/en/2.0), not original government-published art for those codes. Do not treat them as official Skiltnormalen drawings. Catalogue JSON marks them with `conversion_method: digit_composite_from_official_plates` and a generation note on each entry.
 
 See also [`sourcing/README.md`](sourcing/README.md) for the detailed graphic-source audit of the 640/650/723/755–780/790 set (including packs that were checked and contained **zero** hits: markering, underskilt, opplysning, forbud, vikeplikt).
 
@@ -114,16 +121,28 @@ Yellow triangular signs with a red border. They do **not** set a rule by themsel
 
 | Code | Name (EN) | Meaning | SVG |
 |------|-----------|---------|-----|
-| `362.100` | Speed limit 100 km/h | Mandatory maximum speed limit of 100 km/h begins. | [`svg/speed_limit/362_100.svg`](svg/speed_limit/362_100.svg) |
-| `362.110` | Speed limit 110 km/h | Mandatory maximum speed limit of 110 km/h begins. | [`svg/speed_limit/362_110.svg`](svg/speed_limit/362_110.svg) |
-| `362.20` | Speed limit 20 km/h | Mandatory maximum speed limit of 20 km/h begins. | — (no graphic) |
+| `362.5` | Speed limit 5 km/h | Mandatory maximum speed limit of 5 km/h begins. | [`svg/speed_limit/362_5.svg`](svg/speed_limit/362_5.svg) **(generated)** |
+| `362.10` | Speed limit 10 km/h | Mandatory maximum speed limit of 10 km/h begins. | [`svg/speed_limit/362_10.svg`](svg/speed_limit/362_10.svg) **(generated)** |
+| `362.15` | Speed limit 15 km/h | Mandatory maximum speed limit of 15 km/h begins. | [`svg/speed_limit/362_15.svg`](svg/speed_limit/362_15.svg) **(generated)** |
+| `362.20` | Speed limit 20 km/h | Mandatory maximum speed limit of 20 km/h begins. | — (no official graphic) |
+| `362.25` | Speed limit 25 km/h | Mandatory maximum speed limit of 25 km/h begins. | [`svg/speed_limit/362_25.svg`](svg/speed_limit/362_25.svg) **(generated)** |
 | `362.30` | Speed limit 30 km/h | Mandatory maximum speed limit of 30 km/h begins. | [`svg/speed_limit/362_30.svg`](svg/speed_limit/362_30.svg) |
+| `362.35` | Speed limit 35 km/h | Mandatory maximum speed limit of 35 km/h begins. | [`svg/speed_limit/362_35.svg`](svg/speed_limit/362_35.svg) **(generated)** |
 | `362.40` | Speed limit 40 km/h | Mandatory maximum speed limit of 40 km/h begins. | [`svg/speed_limit/362_40.svg`](svg/speed_limit/362_40.svg) |
+| `362.45` | Speed limit 45 km/h | Mandatory maximum speed limit of 45 km/h begins. | [`svg/speed_limit/362_45.svg`](svg/speed_limit/362_45.svg) **(generated)** |
 | `362.50` | Speed limit 50 km/h | Mandatory maximum speed limit of 50 km/h begins. | [`svg/speed_limit/362_50.svg`](svg/speed_limit/362_50.svg) |
+| `362.55` | Speed limit 55 km/h | Mandatory maximum speed limit of 55 km/h begins. | [`svg/speed_limit/362_55.svg`](svg/speed_limit/362_55.svg) **(generated)** |
 | `362.60` | Speed limit 60 km/h | Mandatory maximum speed limit of 60 km/h begins. | [`svg/speed_limit/362_60.svg`](svg/speed_limit/362_60.svg) |
+| `362.65` | Speed limit 65 km/h | Mandatory maximum speed limit of 65 km/h begins. | [`svg/speed_limit/362_65.svg`](svg/speed_limit/362_65.svg) **(generated)** |
 | `362.70` | Speed limit 70 km/h | Mandatory maximum speed limit of 70 km/h begins. | [`svg/speed_limit/362_70.svg`](svg/speed_limit/362_70.svg) |
+| `362.75` | Speed limit 75 km/h | Mandatory maximum speed limit of 75 km/h begins. | [`svg/speed_limit/362_75.svg`](svg/speed_limit/362_75.svg) **(generated)** |
 | `362.80` | Speed limit 80 km/h | Mandatory maximum speed limit of 80 km/h begins. | [`svg/speed_limit/362_80.svg`](svg/speed_limit/362_80.svg) |
+| `362.85` | Speed limit 85 km/h | Mandatory maximum speed limit of 85 km/h begins. | [`svg/speed_limit/362_85.svg`](svg/speed_limit/362_85.svg) **(generated)** |
 | `362.90` | Speed limit 90 km/h | Mandatory maximum speed limit of 90 km/h begins. | [`svg/speed_limit/362_90.svg`](svg/speed_limit/362_90.svg) |
+| `362.95` | Speed limit 95 km/h | Mandatory maximum speed limit of 95 km/h begins. | [`svg/speed_limit/362_95.svg`](svg/speed_limit/362_95.svg) **(generated)** |
+| `362.100` | Speed limit 100 km/h | Mandatory maximum speed limit of 100 km/h begins. | [`svg/speed_limit/362_100.svg`](svg/speed_limit/362_100.svg) |
+| `362.105` | Speed limit 105 km/h | Mandatory maximum speed limit of 105 km/h begins. | [`svg/speed_limit/362_105.svg`](svg/speed_limit/362_105.svg) **(generated)** |
+| `362.110` | Speed limit 110 km/h | Mandatory maximum speed limit of 110 km/h begins. | [`svg/speed_limit/362_110.svg`](svg/speed_limit/362_110.svg) |
 | `364.20` | End of special speed limit 20 km/h | Ends the special 20 km/h speed limit; the general limit for the road type applies again. | — (no graphic) |
 | `364.30` | End of special speed limit 30 km/h | Ends the special 30 km/h speed limit; the general limit for the road type applies again. | [`svg/speed_limit/364_30.svg`](svg/speed_limit/364_30.svg) |
 | `364.40` | End of special speed limit 40 km/h | Ends the special 40 km/h speed limit; the general limit for the road type applies again. | [`svg/speed_limit/364_40.svg`](svg/speed_limit/364_40.svg) |
